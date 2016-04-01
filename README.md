@@ -1,14 +1,14 @@
 # Da Vinci CSS
 
-![]()
+![aurea](aurea.jpg)
 
 ![Release v0.1.0](https://img.shields.io/badge/release-v0.1.0-f775ff.svg)
 
 > Creating shapes and drawings with CSS easier ways possible.
 
 ## Summary
-- [Why?](#why?)
-- [How to install?](#how-to-install?)
+- [Why?](#why)
+- [How to install?](#how-to-install)
 - [Usage](#usage)
   - [Basic shapes](#basic-shapes)
     - [rectangle](#rectangle)
@@ -26,11 +26,11 @@
 - [History](#history)
 - [License](#license)
 
-## Why?
+## <a name=“why”></a> Why?
 
 Because it's fun.
 
-## How to install?
+## <a name=“how-to-install”></a> How to install?
 
 > **Note:** To use the framework, you'll need to compile your style with the Stylus preprocessor using NodeJS, for more information see [NodeJS](https://nodejs.org/en/) and [Stylus](http://stylus-lang.com/).
 
