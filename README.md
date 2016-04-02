@@ -1,10 +1,10 @@
-# Da Vinci CSS
-
 ![aurea](aurea.jpg)
+
+# Da Vinci CSS
 
 ![Release v0.1.0](https://img.shields.io/badge/release-v0.1.0-f775ff.svg)
 
-> Creating shapes and drawings with CSS easier ways possible.
+> Creating shapes and drawings with CSS.
 
 ## Summary
 - [Why?](#why)
@@ -15,9 +15,6 @@
     - [circle](#circle)
     - [oval](#oval)
     - [triangle](#triangle)
-    - [polygon](#polygon)
-  - [Special shapes](#special-shapes)
-    - [heart](#heart)
   - [position](#position)
   - [flip](#flip)
   - [clone](#clone)
@@ -26,11 +23,11 @@
 - [History](#history)
 - [License](#license)
 
-## <a name=“why”></a> Why?
+## <a name="why"></a> Why?
 
 Because it's fun.
 
-## <a name=“how-to-install”></a> How to install?
+## <a name="how-to-install"></a> How to install?
 
 > **Note:** To use the framework, you'll need to compile your style with the Stylus preprocessor using NodeJS, for more information see [NodeJS](https://nodejs.org/en/) and [Stylus](http://stylus-lang.com/).
 
@@ -51,51 +48,37 @@ Because it's fun.
 
 ```css
 .elemento
-  rect(100, 200, #eb02dd) /* width, height, color */
+  rect(100px, 200px, #eb02dd) /* width, height, color */
 ```
 
 #### circle
 
 ```css
 .elemento
-  circ(50, #eb02dd) /* radius, color */
+  circ(50px, #eb02dd) /* radius, color */
 ```
 
 #### oval
 
 ```css
 .elemento
-  oval(50, 100, #eb02dd) /* width, height, color */
+  oval(50px, 100px, #eb02dd) /* width, height, color */
 ```
 
 #### triangle
 
 ```css
 .elemento
-  tri(50, 50, 50, #eb02dd) /* */
+  tri(50px, 50px, 50px, #eb02dd) /*top, right, left, color */
 ```
 
-#### polygon
-
-```css
-.elemento
-  poly() /* */
-```
-
-### Special shapes
-
-```css
-.elemento
-  heart() /* */
-```
-
-### More features
+### Other features
 
 #### position
 
 ```css
 .elemento
-  position(10, 10, 1) /* x, y, layer */
+  position(10px, 10px, 1) /* x, y, layer */
 ```
 
 #### flip
@@ -109,7 +92,7 @@ Because it's fun.
 
 ```css
 .elemento
-  clone(50, 50, #ccc) /* */
+  clone(50px, 50px, #ccc) /* x, y, color*/
 ```
 
 ## Versioning

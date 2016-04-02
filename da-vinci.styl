@@ -1,0 +1,68 @@
+/*
+Da Vinci CSS
+Platform: Stylus
+
+Original repository:
+https://github.com/afonsopacifer/da-vinci-css
+Author:
+Afonso Pacifer (afonsopacifer.com)
+Version: 0.1.0
+Licence:
+MIT - https://github.com/afonsopacifer/da-vinci-css/blob/master/licence.md
+* /
+
+/* Basic shapes
+------------------------------------------------*/
+
+// rectangle
+rect(w,h,c)
+  width w
+  height h
+  background-color c
+  display inline-block
+
+// circle
+circ(r,c)
+  width r * 2
+  height r * 2
+  background-color c
+  border-radius 50%
+  display inline-block
+
+// oval
+oval(w,h,c)
+  width w
+  height h
+  background-color c
+  border-radius 50%
+  display inline-block
+
+// triangle
+tri(t,l,r,c)
+  width 0
+  height 0
+  border-left l solid transparent
+  border-right r solid transparent
+  border-bottom t solid c
+  display inline-block
+
+/* More features
+------------------------------------------------*/
+
+// position
+pos(x,y,z)
+  position absolute
+  top x
+  left y
+  z-index z
+
+// flip
+flip(x)
+  if x == "horizontal"
+    transform rotateY(180deg)
+  if x == "vertical"
+    transform rotateX(180deg)
+
+// // clone
+clone(x,y,c)
+  box-shadow x y c
