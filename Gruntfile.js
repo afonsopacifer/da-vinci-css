@@ -14,8 +14,8 @@ module.exports = function( grunt ) {
       },
 
       styl: {
-        files: 'demo/assets/stylus/*.styl',
-        tasks: ['stylus:compile'],
+        files: ['demo/assets/stylus/*.styl', 'da-vinci.styl'],
+        tasks: ['stylus:compile','stylint'],
       },
 
       css: {
@@ -38,6 +38,10 @@ module.exports = function( grunt ) {
           'demo/assets/css/style.css':'demo/assets/stylus/style.styl' // 1:1 compile
         }
       }
+    },
+
+    stylint: {
+      src: ['da-vinci.styl']
     },
 
     //Deploy the production files for gh-pages
@@ -70,8 +74,10 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-gh-pages');
+  grunt.loadNpmTasks('grunt-stylint');
 
   // tasks
+  grunt.registerTask( 'lint', ['stylint']);
   grunt.registerTask( 'serve', ['connect','watch']);
   grunt.registerTask( 'deploy', ['gh-pages']);
 };

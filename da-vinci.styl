@@ -15,54 +15,54 @@ MIT - https://github.com/afonsopacifer/da-vinci-css/blob/master/licence.md
 ------------------------------------------------*/
 
 // rectangle
-rect(w,h,c = #eb02dd)
-  width w
-  height h
-  background-color c
+rect($w, $h, $c = #eb02dd)
+  background-color $c
   display inline-block
+  height $h
+  width $w
 
 // circle
-circ(r,c = #eb02dd)
-  width r * 2
-  height r * 2
-  background-color c
+circ($r, $c = #eb02dd)
+  background-color $c
   border-radius 50%
   display inline-block
+  height $r * 2
+  width $r * 2
 
 // oval
-oval(w,h,c = #eb02dd)
-  width w
-  height h
-  background-color c
+oval($w, $h, $c = #eb02dd)
+  background-color $c
   border-radius 50%
   display inline-block
+  height $h
+  width $w
 
 // triangle
-tri(t,l,r,c = #eb02dd)
-  width 0
-  height 0
-  border-left l solid transparent
-  border-right r solid transparent
-  border-bottom t solid c
+tri($t, $l, $r, $c = #eb02dd)
+  border-bottom $t solid $c
+  border-left $l solid transparent
+  border-right $r solid transparent
   display inline-block
+  height 0
+  width 0
 
 /* More features
 ------------------------------------------------*/
 
 // position
-pos(x,y,z = 1)
+pos($x, $y, $z = 1)
+  left $y
   position absolute
-  top x
-  left y
-  z-index z
+  top $x
+  z-index $z
 
 // flip
-flip(x = horizontal)
-  if x == "horizontal"
+flip($x = horizontal)
+  if $x == "horizontal"
     transform rotateY(180deg)
-  if x == "vertical"
+  if $x == "vertical"
     transform rotateX(180deg)
 
 // clone
-clone(x,y,c = #eb02dd)
-  box-shadow x y c
+clone($x, $y, $c = #eb02dd)
+  box-shadow $x $y $c
