@@ -1,4 +1,4 @@
-![aurea](aurea.jpg)
+![aurea](img/aurea.jpg)
 
 # Da Vinci CSS
 
@@ -45,11 +45,12 @@ Because it's fun.
 
 #### rectangle
 
-
 ```css
 .elemento
   rect(100px, 200px, #eb02dd) /* width, height, color (default #eb02dd) */
 ```
+
+![rectangle](img/rect.jpg)
 
 #### circle
 
@@ -58,6 +59,8 @@ Because it's fun.
   circ(50px, #eb02dd) /* radius, color (default = #eb02dd) */
 ```
 
+![circle](img/circle.jpg)
+
 #### oval
 
 ```css
@@ -65,12 +68,16 @@ Because it's fun.
   oval(50px, 100px, #eb02dd) /* width, height, color (default = #eb02dd) */
 ```
 
+![oval](img/oval.jpg)
+
 #### triangle
 
 ```css
 .elemento
-  tri(50px, 50px, 50px, #eb02dd) /*top, right, left (default = #eb02dd) */
+  tri(50px, 50px, 50px, #eb02dd) /* top, right, left (default = #eb02dd) */
 ```
+
+![triangle](img/triangle.jpg)
 
 ### Other features
 
@@ -81,12 +88,25 @@ Because it's fun.
   position(10px, 10px, 1) /* x, y, layer(default = 1) */
 ```
 
-#### flip
+![position](img/position.jpg)
+
+#### flip (vertical)
 
 ```css
 .elemento
   flip(vertical) /* vertical or horizontal (default = horizontal) */
 ```
+
+![vertical](img/vertical.gif)
+
+#### flip (horizontal)
+
+```css
+.elemento
+  flip(horizontal) /* vertical or horizontal (default = horizontal) */
+```
+
+![horizontal](img/horizontal.gif)
 
 #### clone
 
@@ -94,6 +114,8 @@ Because it's fun.
 .elemento
   clone(50px, 50px, #ccc) /* x, y, color (default = #eb02dd) */
 ```
+
+![clone](img/clone.jpg)
 
 ## Versioning
 
