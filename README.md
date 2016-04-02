@@ -46,8 +46,8 @@ Because it's fun.
 #### rectangle
 
 ```css
-.elemento
-  rect(100px, 200px, #eb02dd) /* width, height, color (default #eb02dd) */
+.element
+  rect(100px, 50px, #eb02dd) /* width, height, color (default #eb02dd) */
 ```
 
 ![rectangle](img/rect.jpg)
@@ -55,7 +55,7 @@ Because it's fun.
 #### circle
 
 ```css
-.elemento
+.element
   circ(50px, #eb02dd) /* radius, color (default = #eb02dd) */
 ```
 
@@ -64,8 +64,8 @@ Because it's fun.
 #### oval
 
 ```css
-.elemento
-  oval(50px, 100px, #eb02dd) /* width, height, color (default = #eb02dd) */
+.element
+  oval(100px, 50px, #eb02dd) /* width, height, color (default = #eb02dd) */
 ```
 
 ![oval](img/oval.jpg)
@@ -73,8 +73,8 @@ Because it's fun.
 #### triangle
 
 ```css
-.elemento
-  tri(50px, 50px, 50px, #eb02dd) /* top, right, left (default = #eb02dd) */
+.element
+  tri(100px, 50px, 50px, #eb02dd) /* top, right, left (default = #eb02dd) */
 ```
 
 ![triangle](img/triangle.jpg)
@@ -84,8 +84,9 @@ Because it's fun.
 #### position
 
 ```css
-.elemento
-  position(10px, 10px, 1) /* x, y, layer(default = 1) */
+.element
+  rect(100px, 50px, #eb02dd)
+  pos(10px, 10px, 1) /* x, y, layer(default = 1) */
 ```
 
 ![position](img/position.jpg)
@@ -93,7 +94,7 @@ Because it's fun.
 #### flip (vertical)
 
 ```css
-.elemento
+.element
   flip(vertical) /* vertical or horizontal (default = horizontal) */
 ```
 
@@ -102,7 +103,7 @@ Because it's fun.
 #### flip (horizontal)
 
 ```css
-.elemento
+.element
   flip(horizontal) /* vertical or horizontal (default = horizontal) */
 ```
 
@@ -111,8 +112,9 @@ Because it's fun.
 #### clone
 
 ```css
-.elemento
-  clone(50px, 50px, #ccc) /* x, y, color (default = #eb02dd) */
+.element
+  rect(100px, 100px, #eb02dd)
+  clone(110px, 0, #ccc) /* x, y, color (default = #eb02dd) */
 ```
 
 ![clone](img/clone.jpg)
