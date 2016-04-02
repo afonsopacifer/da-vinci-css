@@ -15,14 +15,14 @@ MIT - https://github.com/afonsopacifer/da-vinci-css/blob/master/licence.md
 ------------------------------------------------*/
 
 // rectangle
-rect(w,h,c)
+rect(w,h,c = #eb02dd)
   width w
   height h
   background-color c
   display inline-block
 
 // circle
-circ(r,c)
+circ(r,c = #eb02dd)
   width r * 2
   height r * 2
   background-color c
@@ -30,7 +30,7 @@ circ(r,c)
   display inline-block
 
 // oval
-oval(w,h,c)
+oval(w,h,c = #eb02dd)
   width w
   height h
   background-color c
@@ -38,7 +38,7 @@ oval(w,h,c)
   display inline-block
 
 // triangle
-tri(t,l,r,c)
+tri(t,l,r,c = #eb02dd)
   width 0
   height 0
   border-left l solid transparent
@@ -50,19 +50,19 @@ tri(t,l,r,c)
 ------------------------------------------------*/
 
 // position
-pos(x,y,z)
+pos(x,y,z = 1)
   position absolute
   top x
   left y
   z-index z
 
 // flip
-flip(x)
+flip(x = horizontal)
   if x == "horizontal"
     transform rotateY(180deg)
   if x == "vertical"
     transform rotateX(180deg)
 
-// // clone
-clone(x,y,c)
+// clone
+clone(x,y,c = #eb02dd)
   box-shadow x y c

@@ -48,28 +48,28 @@ Because it's fun.
 
 ```css
 .elemento
-  rect(100px, 200px, #eb02dd) /* width, height, color */
+  rect(100px, 200px, #eb02dd) /* width, height, color (default #eb02dd) */
 ```
 
 #### circle
 
 ```css
 .elemento
-  circ(50px, #eb02dd) /* radius, color */
+  circ(50px, #eb02dd) /* radius, color (default = #eb02dd) */
 ```
 
 #### oval
 
 ```css
 .elemento
-  oval(50px, 100px, #eb02dd) /* width, height, color */
+  oval(50px, 100px, #eb02dd) /* width, height, color (default = #eb02dd) */
 ```
 
 #### triangle
 
 ```css
 .elemento
-  tri(50px, 50px, 50px, #eb02dd) /*top, right, left, color */
+  tri(50px, 50px, 50px, #eb02dd) /*top, right, left (default = #eb02dd) */
 ```
 
 ### Other features
@@ -78,21 +78,21 @@ Because it's fun.
 
 ```css
 .elemento
-  position(10px, 10px, 1) /* x, y, layer */
+  position(10px, 10px, 1) /* x, y, layer(default = 1) */
 ```
 
 #### flip
 
 ```css
 .elemento
-  flip(vertical) /* vertical or horizontal */
+  flip(vertical) /* vertical or horizontal (default = horizontal) */
 ```
 
 #### clone
 
 ```css
 .elemento
-  clone(50px, 50px, #ccc) /* x, y, color*/
+  clone(50px, 50px, #ccc) /* x, y, color (default = #eb02dd) */
 ```
 
 ## Versioning
