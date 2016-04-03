@@ -46,7 +46,24 @@ tri($t, $l, $r, $c = #eb02dd)
   height 0
   width 0
 
-/* More features
+/* Pixel Art
+------------------------------------------------*/
+
+// pixel
+pixel($r, $c, $s, $c = #000)
+  $s*($c - 1) $s*($r - 1) $c
+
+p($r, $c, $s, $c = #000)
+  $s*($c - 1) $s*($r - 1) $c
+
+// grid
+grid($cell-size, $grid-size = 4, $stroke-color = #000)
+   background linear-gradient(to top, transparent 98%, $stroke-color 98%) repeat-x, linear-gradient(to bottom, transparent 98%, $stroke-color 98%), linear-gradient(to left, transparent 98%, $stroke-color 98%) repeat-y, linear-gradient(to right, transparent 98%, $stroke-color 98%)
+   background-size $cell-size
+   height $cell-size * $grid-size
+   width $cell-size * $grid-size
+
+/* Edit
 ------------------------------------------------*/
 
 // position
