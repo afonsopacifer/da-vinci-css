@@ -15,9 +15,14 @@
     - [circle](#circle)
     - [oval](#oval)
     - [triangle](#triangle)
-  - [position](#position)
-  - [flip](#flip)
-  - [clone](#clone)
+  - [Pixel Art](#pixel-art)
+    - [pixels](#pixels)
+    - [grid](#grid)
+    - [plankton demo](#plankton-demo)
+  - [Edit](#edit)
+    - [position](#position)
+    - [flip](#flip)
+    - [clone](#clone)
 - [Versioning](#versioning)
 - [Contributing](#contributing)
 - [History](#history)
@@ -79,7 +84,7 @@ Because it's fun.
 
 ![triangle](img/triangle.jpg)
 
-### Other features
+### Edit
 
 #### position
 
@@ -118,6 +123,66 @@ Because it's fun.
 ```
 
 ![clone](img/clone.jpg)
+
+### Pixel art
+
+#### pixels
+
+```css
+.art {
+  rect(10px, 10px)
+  box-shadow: pixel(2, 2, 10px, #000); /* row, col, displacement, color (default = #000) */
+}
+```
+
+Create variables and use p( ) > pixel( ).
+
+```css
+.art {
+  a = 10px
+  rect(a, a)
+  box-shadow: p(2, 2, a);
+}
+```
+
+Create multiples pixels.
+
+```css
+.art {
+  a = 10px
+  rect(a, a)
+  box-shadow:
+    p(2, 2, a),
+    p(3, 3, a),
+    p(4, 5, a),
+    p(6, 6, a);
+}
+```
+
+#### grid
+
+```css
+.canvas {
+  grid(10px, 4, #000) /* cell size, grid size (default = 4), stroke color (default = #000) */
+}
+```
+
+#### plankton demo
+
+```html
+<div class="canvas">
+  <div class="plankton"></div>
+</div>
+```
+
+```css
+.canvas {
+
+}
+.plankton {
+
+}
+```
 
 ## Versioning
 
