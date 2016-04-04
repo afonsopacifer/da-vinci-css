@@ -2,7 +2,7 @@
 
 # Da Vinci CSS
 
-![Release v0.1.0](https://img.shields.io/badge/release-v0.1.0-f775ff.svg)
+![Release v0.2.0](https://img.shields.io/badge/release-v0.2.0-f775ff.svg)
 
 > Creating shapes and drawings with CSS. View a [Demo](http://afonsopacifer.github.io/da-vinci-css/).
 
@@ -135,7 +135,7 @@ Because it's fun.
 }
 ```
 
-![](img/pixels.jpg)
+![pixels](img/pixels.jpg)
 
 > **Tip:** Create variables and use p( ) > pixel( ).
 
@@ -160,7 +160,7 @@ Because it's fun.
 }
 ```
 
-![](img/multiple-pixels.jpg)
+![multiple-pixels](img/multiple-pixels.jpg)
 
 #### grid
 
@@ -170,7 +170,7 @@ Because it's fun.
 }
 ```
 
-![](img/grid.jpg)
+![grid](img/grid.jpg)
 
 #### demo
 
