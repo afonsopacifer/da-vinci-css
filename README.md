@@ -4,7 +4,7 @@
 
 ![Release v0.1.0](https://img.shields.io/badge/release-v0.1.0-f775ff.svg)
 
-> Creating shapes and drawings with CSS.
+> Creating shapes and drawings with CSS. View a [Demo](http://afonsopacifer.github.io/da-vinci-css/).
 
 ## Summary
 - [Why?](#why)
@@ -18,7 +18,7 @@
   - [Pixel Art](#pixel-art)
     - [pixels](#pixels)
     - [grid](#grid)
-    - [plankton demo](#plankton-demo)
+    - [demo](#demo)
   - [Edit](#edit)
     - [position](#position)
     - [flip](#flip)
@@ -135,7 +135,9 @@ Because it's fun.
 }
 ```
 
-Create variables and use p( ) > pixel( ).
+![](img/pixels.jpg)
+
+> **Tip:** Create variables and use p( ) > pixel( ).
 
 ```css
 .art {
@@ -145,7 +147,7 @@ Create variables and use p( ) > pixel( ).
 }
 ```
 
-Create multiples pixels.
+> **Tip:** Create multiples pixels.
 
 ```css
 .art {
@@ -154,10 +156,11 @@ Create multiples pixels.
   box-shadow:
     p(2, 2, a),
     p(3, 3, a),
-    p(4, 5, a),
-    p(6, 6, a);
+    p(4, 4, a);
 }
 ```
+
+![](img/multiple-pixels.jpg)
 
 #### grid
 
@@ -167,22 +170,13 @@ Create multiples pixels.
 }
 ```
 
-#### plankton demo
+![](img/grid.jpg)
 
-```html
-<div class="canvas">
-  <div class="plankton"></div>
-</div>
-```
+#### demo
 
-```css
-.canvas {
+![Plankton](img/plankton.jpg)
 
-}
-.plankton {
-
-}
-```
+[View demo](https://github.com/afonsopacifer/da-vinci-css)
 
 ## Versioning
 
