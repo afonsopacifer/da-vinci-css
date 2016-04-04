@@ -130,7 +130,7 @@ Because it's fun.
 
 ```css
 .art {
-  rect(10px, 10px)
+  rect(10px, 10px) /* first pixel on position 1 1 */
   box-shadow: pixel(2, 2, 10px, #000); /* row, col, displacement, color (default = #000) */
 }
 ```
