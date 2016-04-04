@@ -2,9 +2,16 @@
 
 # Da Vinci CSS
 
-![Release v0.1.0](https://img.shields.io/badge/release-v0.1.0-f775ff.svg)
+![Release v0.2.0](https://img.shields.io/badge/release-v0.2.0-f775ff.svg)
 
 > Creating shapes and drawings with CSS.
+
+#### Pixel Art demo
+
+![Plankton](img/plankton.jpg)
+
+Sheldon J. Plankton -
+[View demo](http://afonsopacifer.github.io/da-vinci-css/)
 
 ## Summary
 - [Why?](#why)
@@ -15,9 +22,13 @@
     - [circle](#circle)
     - [oval](#oval)
     - [triangle](#triangle)
-  - [position](#position)
-  - [flip](#flip)
-  - [clone](#clone)
+  - [Pixel Art](#pixel-art)
+    - [pixels](#pixels)
+    - [grid](#grid)
+  - [Edit](#edit)
+    - [position](#position)
+    - [flip](#flip)
+    - [clone](#clone)
 - [Versioning](#versioning)
 - [Contributing](#contributing)
 - [History](#history)
@@ -79,7 +90,7 @@ Because it's fun.
 
 ![triangle](img/triangle.jpg)
 
-### Other features
+### Edit
 
 #### position
 
@@ -118,6 +129,54 @@ Because it's fun.
 ```
 
 ![clone](img/clone.jpg)
+
+### Pixel art
+
+#### pixels
+
+```css
+.art {
+  rect(10px, 10px) /* first pixel on position 1 1 */
+  box-shadow: pixel(2, 2, 10px, #000); /* row, col, displacement, color (default = #000) */
+}
+```
+
+![pixels](img/pixels.jpg)
+
+> **Tip:** Create variables and use p( ) > pixel( ).
+
+```css
+.art {
+  a = 10px
+  rect(a, a)
+  box-shadow: p(2, 2, a);
+}
+```
+
+> **Tip:** Create multiples pixels.
+
+```css
+.art {
+  a = 10px
+  rect(a, a)
+  box-shadow:
+    p(2, 2, a),
+    p(3, 3, a),
+    p(4, 4, a);
+}
+```
+
+![multiple-pixels](img/multiple-pixels.jpg)
+
+#### grid
+
+```css
+.canvas {
+  grid(10px, 4, #000) /* cell size, grid size (default = 4), stroke color (default = #000) */
+}
+```
+
+![grid](img/grid.jpg)
 
 ## Versioning
 

@@ -6,7 +6,7 @@ Original repository:
 https://github.com/afonsopacifer/da-vinci-css
 Author:
 Afonso Pacifer (afonsopacifer.com)
-Version: 0.1.0
+Version: 0.2.0
 Licence:
 MIT - https://github.com/afonsopacifer/da-vinci-css/blob/master/licence.md
 * /
@@ -17,7 +17,6 @@ MIT - https://github.com/afonsopacifer/da-vinci-css/blob/master/licence.md
 // rectangle
 rect($w, $h, $c = #eb02dd)
   background-color $c
-  display inline-block
   height $h
   width $w
 
@@ -25,7 +24,6 @@ rect($w, $h, $c = #eb02dd)
 circ($r, $c = #eb02dd)
   background-color $c
   border-radius 50%
-  display inline-block
   height $r * 2
   width $r * 2
 
@@ -33,7 +31,6 @@ circ($r, $c = #eb02dd)
 oval($w, $h, $c = #eb02dd)
   background-color $c
   border-radius 50%
-  display inline-block
   height $h
   width $w
 
@@ -42,11 +39,27 @@ tri($t, $l, $r, $c = #eb02dd)
   border-bottom $t solid $c
   border-left $l solid transparent
   border-right $r solid transparent
-  display inline-block
   height 0
   width 0
 
-/* More features
+/* Pixel Art
+------------------------------------------------*/
+
+// pixel
+pixel($r, $cl, $s, $c = #000)
+  ($s * ($cl - 1)) ($s * ($r - 1)) $c
+
+p($r, $cl, $s, $c = #000)
+  ($s * ($cl - 1)) ($s * ($r - 1)) $c
+
+// grid
+grid($cell-size, $grid-size = 4, $stroke-color = #000)
+  background linear-gradient(to top, transparent 94%, $stroke-color 94%) repeat-x, linear-gradient(to bottom, transparent 94%, $stroke-color 94%), linear-gradient(to left, transparent 94%, $stroke-color 94%) repeat-y, linear-gradient(to right, transparent 94%, $stroke-color 94%)
+  background-size $cell-size
+  height $cell-size * $grid-size
+  width $cell-size * $grid-size
+
+/* Edit
 ------------------------------------------------*/
 
 // position

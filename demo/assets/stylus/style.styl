@@ -1,127 +1,52 @@
-/* Vendors
-_____________________________________________________ */
-
 // Da Vinci CSS
 @import "../../../da-vinci"
+
+// Demos
+@import "../../plankton"
 
 /* Colors
 _____________________________________________________ */
 highlight = #eb02dd
 
-/* _____________________________________________________ */
+*
+	box-sizing border-box
 
 body
 	font-family 'Roboto', sans-serif
 	font-weight 300
-	background-color #FFF
+	background-color #eee
 	color #595959
 
-/* header
-_____________________________________________________ */
-
-.header
-	text-align center
-
-.heading
-	margin 0
-
-/* main
-_____________________________________________________ */
-
 .main
-	border-top solid 1px highlight
 	width 100%
-	margin-top 40px
 	padding 30px
 
-// rectangle
-.element-1
-	rect(100px,50px,highlight)
+.demo
+	background #fff
+	display inline-block
+	padding 15px
 
-// circle
-.element-2
-	circ(50px,highlight)
-
-// circle
-.element-3
-	oval(100px,50px,highlight)
-
-// triangle
-.element-4
-	tri(100px,50px,50px,highlight)
-
-// position
-.element-5
-	rect(100px,50px,highlight)
-	pos(10px,10px,1)
-
-// flip
-.element-6
-	rect(200px,200px,highlight)
-	flip(horizontal)
-	background-image: url("../img/magic.gif");
-	background-size: 200px 200px;
-
-.element-7
-	rect(200px,200px,highlight)
-	flip(vertical)
-	background-image: url("../img/magic.gif");
-	background-size: 200px 200px;
-
-.element-8
-	rect(100px,100px,highlight)
-	clone(110px,0, #ccc)
-
-/* Footer
-_____________________________________________________ */
-.footer
-	text-align center
-	background-color highlight
-	padding 5px 0
-	width 100%
+.demo h2
+	margin 0 0 15px 0
 
 .link
+	color highlight
+	text-decoration none
+	font-weight 300
+	padding 10px 0
+	display inline-block
+
+.link-btn
+	background highlight
 	color #fff
 	text-decoration none
 	font-weight 300
+	padding 5px 10px
+	display inline-block
+	transition opacity .3
+
+.link-btn:hover
+	opacity .8
 
 .link:hover
 	text-decoration underline
-
-/* Heart */
-.heart {
-  margin: 0 5px;
-  width: 10px;
-  height: 10px;
-  background-color:#fff;
-  position: relative;
-  display: inline-block;
-  animation: pulse .5s infinite alternate ease-in;
-}
-
-.heart:before {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color:#fff;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  content: "";
-}
-
-.heart:after {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color:#fff;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  content: "";
-}
-
-@keyframes pulse {
-    from {transform: rotate(-135deg) scale(1);}
-    to   {transform: rotate(-135deg) scale(1.2);}
-}
