@@ -4,7 +4,14 @@
 
 ![Release v0.2.0](https://img.shields.io/badge/release-v0.2.0-f775ff.svg)
 
-> Creating shapes and drawings with CSS. View a [Demo](http://afonsopacifer.github.io/da-vinci-css/).
+> Creating shapes and drawings with CSS.
+
+#### Pixel Art demo
+
+![Plankton](img/plankton.jpg)
+
+Sheldon J. Plankton -
+[View demo](http://afonsopacifer.github.io/da-vinci-css/)
 
 ## Summary
 - [Why?](#why)
@@ -18,7 +25,6 @@
   - [Pixel Art](#pixel-art)
     - [pixels](#pixels)
     - [grid](#grid)
-    - [demo](#demo)
   - [Edit](#edit)
     - [position](#position)
     - [flip](#flip)
@@ -171,12 +177,6 @@ Because it's fun.
 ```
 
 ![grid](img/grid.jpg)
-
-#### demo
-
-![Plankton](img/plankton.jpg)
-
-[View demo](https://github.com/afonsopacifer/da-vinci-css)
 
 ## Versioning
 
