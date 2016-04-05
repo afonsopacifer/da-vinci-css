@@ -23,8 +23,12 @@ Sheldon J. Plankton -
     - [oval](#oval)
     - [triangle](#triangle)
   - [Pixel Art](#pixel-art)
-    - [pixels](#pixels)
     - [grid](#grid)
+    - [origin](#origin)
+    - [pixels](#pixels)
+    - [line](#line)
+    - [lineX](#linex)
+    - [lineY](#liney)
   - [Edit](#edit)
     - [position](#position)
     - [flip](#flip)
@@ -132,11 +136,31 @@ Because it's fun.
 
 ### Pixel art
 
+#### grid
+
+```css
+.canvas {
+  grid(10px, 4, #000) /* cell size, grid size (default = 4), stroke color (default = #000) */
+}
+```
+
+![grid](img/grid.jpg)
+
+#### origin
+
+```css
+.art {
+  origin(1, 1, 10px, #000) /* row, col, displacement, color (default = #000) */
+}
+```
+
+![](img/.jpg)
+
 #### pixels
 
 ```css
 .art {
-  rect(10px, 10px) /* first pixel on position 1 1 */
+  origin(1, 1, 10px, #000)
   box-shadow: pixel(2, 2, 10px, #000); /* row, col, displacement, color (default = #000) */
 }
 ```
@@ -148,35 +172,46 @@ Because it's fun.
 ```css
 .art {
   a = 10px
-  rect(a, a)
+  origin(1, 1, a)
   box-shadow: p(2, 2, a);
 }
 ```
 
-> **Tip:** Create multiples pixels.
+#### line
 
 ```css
 .art {
   a = 10px
-  rect(a, a)
-  box-shadow:
-    p(2, 2, a),
-    p(3, 3, a),
-    p(4, 4, a);
+  origin(1, 1, a)
+  box-shadow: line(2..6, a, #eb02dd) /* start..end, displacement, color (default = #000) */
 }
 ```
 
-![multiple-pixels](img/multiple-pixels.jpg)
+![](img/.jpg)
 
-#### grid
+#### lineX
 
 ```css
-.canvas {
-  grid(10px, 4, #000) /* cell size, grid size (default = 4), stroke color (default = #000) */
+.art {
+  a = 10px
+  origin(1, 1, a)
+  box-shadow: lineX(2..6, a, #eb02dd) /* start..end, displacement, color (default = #000) */
 }
 ```
 
-![grid](img/grid.jpg)
+![](img/.jpg)
+
+#### lineY
+
+```css
+.art {
+  a = 10px
+  origin(1, 1, a)
+  box-shadow: lineY(2..6, a, #eb02dd) /* start..end, displacement, color (default = #000) */
+}
+```
+
+![](img/.jpg)
 
 ## Versioning
 
