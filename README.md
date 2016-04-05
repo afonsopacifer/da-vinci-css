@@ -183,7 +183,7 @@ Because it's fun.
 .art {
   a = 10px
   origin(1, 1, a)
-  box-shadow: line(2..6, a, #eb02dd) /* start..end, displacement, color (default = #000) */
+  box-shadow: line(2..6, a, #eb02dd); /* start..end, displacement, color (default = #000) */
 }
 ```
 
@@ -195,7 +195,7 @@ Because it's fun.
 .art {
   a = 10px
   origin(1, 1, a)
-  box-shadow: lineX(2..6, a, #eb02dd) /* start..end, displacement, color (default = #000) */
+  box-shadow: lineX(2..6, a, #eb02dd); /* start..end, displacement, color (default = #000) */
 }
 ```
 
@@ -207,7 +207,7 @@ Because it's fun.
 .art {
   a = 10px
   origin(1, 1, a)
-  box-shadow: lineY(2..6, a, #eb02dd) /* start..end, displacement, color (default = #000) */
+  box-shadow: lineY(2..6, a, #eb02dd); /* start..end, displacement, color (default = #000) */
 }
 ```
 
