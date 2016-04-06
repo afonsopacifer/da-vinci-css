@@ -2,7 +2,7 @@
 
 # Da Vinci CSS
 
-![Release v0.2.0](https://img.shields.io/badge/release-v0.2.0-f775ff.svg)
+![Release v0.3.0](https://img.shields.io/badge/release-v0.3.0-f775ff.svg)
 
 > Creating shapes and drawings with CSS.
 
@@ -23,8 +23,15 @@ Sheldon J. Plankton -
     - [oval](#oval)
     - [triangle](#triangle)
   - [Pixel Art](#pixel-art)
-    - [pixels](#pixels)
+    - [markup](#markup)
     - [grid](#grid)
+    - [origin](#origin)
+    - [pixels](#pixels)
+    - [line](#line)
+    - [lineX](#linex)
+    - [lineY](#liney)
+  - [Images](#images)
+    - [img](#img)
   - [Edit](#edit)
     - [position](#position)
     - [flip](#flip)
@@ -90,6 +97,124 @@ Because it's fun.
 
 ![triangle](img/triangle.jpg)
 
+### Pixel art
+
+#### markup
+
+```html
+<div class="canvas">
+  <div class="art"></div>
+</div>
+```
+
+#### grid
+
+```css
+.canvas {
+  grid(30px, 4, #000) /* cell size, grid size (default = 4), stroke color (default = #000) */
+}
+```
+
+![grid](img/grid.jpg)
+
+#### origin
+
+```css
+.art {
+  origin(1, 1, 30px, #000) /* row, col, displacement, color (default = #000) */
+}
+```
+
+![origin](img/origin.jpg)
+
+#### pixels
+
+```css
+.art {
+  origin(1, 1, 30px, #000)
+  box-shadow: pixel(2, 2, 30px, #000); /* row, col, displacement, color (default = #000) */
+}
+```
+
+> **Tip:** Create variables and use p( ) > pixel( ).
+
+```css
+.art {
+  a = 30px
+  origin(1, 1, a)
+  box-shadow: p(2, 2, a);
+}
+```
+
+![pixels](img/pixels.jpg)
+
+#### line
+
+```css
+.art {
+  a = 30px
+  origin(1, 1, a)
+  box-shadow: line(2..6, a, #eb02dd); /* start..end, displacement, color (default = #000) */
+}
+```
+
+![line](img/line.jpg)
+
+#### lineX
+
+```css
+.art {
+  a = 30px
+  origin(1, 1, a)
+  box-shadow: lineX(2..6, a, #eb02dd); /* start..end, displacement, color (default = #000) */
+}
+```
+
+![lineX](img/linex.jpg)
+
+#### lineY
+
+```css
+.art {
+  a = 30px
+  origin(1, 1, a)
+  box-shadow: lineY(2..6, a, #eb02dd); /* start..end, displacement, color (default = #000) */
+}
+```
+
+![lineY](img/liney.jpg)
+
+**Working all together**
+
+```css
+.canvas {
+  grid(30px, 6, #ccc)
+}
+
+.art {
+  a = 30px
+  origin(1, 1, a, #eb02dd)
+  box-shadow:
+    pixel(3, 4, a, #eb02dd),
+    line(2..6, a, purple),
+    lineY(2..6, a, pink),
+    lineX(2..6, a, pink);
+}
+```
+
+![lineY](img/multline.jpg)
+
+### Images
+
+#### img
+
+```css
+.picture
+  img("magic.gif", 200px, 200px) /* url, width, height */
+```
+
+![magic](img/magic.gif)
+
 ### Edit
 
 #### position
@@ -106,6 +231,7 @@ Because it's fun.
 
 ```css
 .element
+  img("magic.gif", 200px, 200px)
   flip(vertical) /* vertical or horizontal (default = horizontal) */
 ```
 
@@ -115,6 +241,7 @@ Because it's fun.
 
 ```css
 .element
+  img("magic.gif", 200px, 200px)
   flip(horizontal) /* vertical or horizontal (default = horizontal) */
 ```
 
@@ -129,54 +256,6 @@ Because it's fun.
 ```
 
 ![clone](img/clone.jpg)
-
-### Pixel art
-
-#### pixels
-
-```css
-.art {
-  rect(10px, 10px) /* first pixel on position 1 1 */
-  box-shadow: pixel(2, 2, 10px, #000); /* row, col, displacement, color (default = #000) */
-}
-```
-
-![pixels](img/pixels.jpg)
-
-> **Tip:** Create variables and use p( ) > pixel( ).
-
-```css
-.art {
-  a = 10px
-  rect(a, a)
-  box-shadow: p(2, 2, a);
-}
-```
-
-> **Tip:** Create multiples pixels.
-
-```css
-.art {
-  a = 10px
-  rect(a, a)
-  box-shadow:
-    p(2, 2, a),
-    p(3, 3, a),
-    p(4, 4, a);
-}
-```
-
-![multiple-pixels](img/multiple-pixels.jpg)
-
-#### grid
-
-```css
-.canvas {
-  grid(10px, 4, #000) /* cell size, grid size (default = 4), stroke color (default = #000) */
-}
-```
-
-![grid](img/grid.jpg)
 
 ## Versioning
 

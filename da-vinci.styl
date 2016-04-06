@@ -6,13 +6,13 @@ Original repository:
 https://github.com/afonsopacifer/da-vinci-css
 Author:
 Afonso Pacifer (afonsopacifer.com)
-Version: 0.2.0
+Version: 0.3.0
 Licence:
 MIT - https://github.com/afonsopacifer/da-vinci-css/blob/master/licence.md
-* /
+*/
 
 /* Basic shapes
-------------------------------------------------*/
+------------------------------------------------ */
 
 // rectangle
 rect($w, $h, $c = #eb02dd)
@@ -43,7 +43,24 @@ tri($t, $l, $r, $c = #eb02dd)
   width 0
 
 /* Pixel Art
-------------------------------------------------*/
+------------------------------------------------ */
+
+// grid
+grid($cell-size, $grid-size = 4, $stroke-color = #000)
+  background linear-gradient(to top, transparent 94%, $stroke-color 94%) repeat-x, linear-gradient(to bottom, transparent 94%, $stroke-color 94%), linear-gradient(to left, transparent 94%, $stroke-color 94%) repeat-y, linear-gradient(to right, transparent 94%, $stroke-color 94%)
+  background-size $cell-size
+  height $cell-size * $grid-size
+  position relative
+  width $cell-size * $grid-size
+
+// origin
+origin($r, $cl, $s, $c = #000)
+  background-color $c
+  height $s
+  left $s * ($r - 1)
+  position absolute
+  top $s * ($cl - 1)
+  width $s
 
 // pixel
 pixel($r, $cl, $s, $c = #000)
@@ -52,15 +69,43 @@ pixel($r, $cl, $s, $c = #000)
 p($r, $cl, $s, $c = #000)
   ($s * ($cl - 1)) ($s * ($r - 1)) $c
 
-// grid
-grid($cell-size, $grid-size = 4, $stroke-color = #000)
-  background linear-gradient(to top, transparent 94%, $stroke-color 94%) repeat-x, linear-gradient(to bottom, transparent 94%, $stroke-color 94%), linear-gradient(to left, transparent 94%, $stroke-color 94%) repeat-y, linear-gradient(to right, transparent 94%, $stroke-color 94%)
-  background-size $cell-size
-  height $cell-size * $grid-size
-  width $cell-size * $grid-size
+// line
+line($range, $s, $c = #000)
+  $pixels = '0 0 #000'
+  for $n in $range
+    $pixels += ', ' +  ($n - 1)*$s + ' ' + ($n - 1)*$s + ' '
+    $pixels += $c
+  return unquote($pixels)
+
+// lineX
+lineX($range, $s, $c = #000)
+  $pixels = '0 0 #000'
+  for $n in $range
+    $pixels += ', ' +  ($n - 1)*$s + ' ' + 0 + ' '
+    $pixels += $c
+  return unquote($pixels)
+
+// lineY
+lineY($range, $s, $c = #000)
+  $pixels = '0 0 #000'
+  for $n in $range
+    $pixels += ', ' + 0 + ' ' + ($n - 1)*$s + ' '
+    $pixels += $c
+  return unquote($pixels)
+
+/* Images
+------------------------------------------------ */
+
+// img
+img($url, $w, $h)
+  background-image url($url)
+  background-repeat no-repeat
+  background-size $w $h
+  height $h
+  width $w
 
 /* Edit
-------------------------------------------------*/
+------------------------------------------------ */
 
 // position
 pos($x, $y, $z = 1)
