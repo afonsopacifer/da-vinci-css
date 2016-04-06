@@ -210,8 +210,10 @@ Because it's fun.
 
 ```css
 .picture
-  img(magic.gif, 200px, 200px) /* url, width, height */
+  img("magic.gif", 200px, 200px) /* url, width, height */
 ```
+
+![magic](img/magic.gif)
 
 ### Edit
 
@@ -229,7 +231,7 @@ Because it's fun.
 
 ```css
 .element
-  img(magic.gif, 200px, 200px)
+  img("magic.gif", 200px, 200px)
   flip(vertical) /* vertical or horizontal (default = horizontal) */
 ```
 
@@ -239,7 +241,7 @@ Because it's fun.
 
 ```css
 .element
-  img(magic.gif, 200px, 200px)
+  img("magic.gif", 200px, 200px)
   flip(horizontal) /* vertical or horizontal (default = horizontal) */
 ```
 

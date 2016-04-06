@@ -93,6 +93,17 @@ lineY($range, $s, $c = #000)
     $pixels += $c
   return unquote($pixels)
 
+/* Images
+------------------------------------------------*/
+
+// img
+img($url, $w, $h)
+  background-image url($url)
+  background-repeat no-repeat
+  background-size $w $h
+  height $h
+  width $w
+
 /* Edit
 ------------------------------------------------*/
 
