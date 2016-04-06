@@ -23,6 +23,7 @@ Sheldon J. Plankton -
     - [oval](#oval)
     - [triangle](#triangle)
   - [Pixel Art](#pixel-art)
+    - [markup](#markup)
     - [grid](#grid)
     - [origin](#origin)
     - [pixels](#pixels)
@@ -94,6 +95,113 @@ Because it's fun.
 
 ![triangle](img/triangle.jpg)
 
+### Pixel art
+
+#### markup
+
+```html
+<div class="canvas">
+  <div class="art"></div>
+</div>
+```
+
+#### grid
+
+```css
+.canvas {
+  grid(30px, 4, #000) /* cell size, grid size (default = 4), stroke color (default = #000) */
+}
+```
+
+![grid](img/grid.jpg)
+
+#### origin
+
+```css
+.art {
+  origin(1, 1, 30px, #000) /* row, col, displacement, color (default = #000) */
+}
+```
+
+![origin](img/origin.jpg)
+
+#### pixels
+
+```css
+.art {
+  origin(1, 1, 30px, #000)
+  box-shadow: pixel(2, 2, 30px, #000); /* row, col, displacement, color (default = #000) */
+}
+```
+
+> **Tip:** Create variables and use p( ) > pixel( ).
+
+```css
+.art {
+  a = 30px
+  origin(1, 1, a)
+  box-shadow: p(2, 2, a);
+}
+```
+
+![pixels](img/pixels.jpg)
+
+#### line
+
+```css
+.art {
+  a = 30px
+  origin(1, 1, a)
+  box-shadow: line(2..6, a, #eb02dd); /* start..end, displacement, color (default = #000) */
+}
+```
+
+![line](img/line.jpg)
+
+#### lineX
+
+```css
+.art {
+  a = 30px
+  origin(1, 1, a)
+  box-shadow: lineX(2..6, a, #eb02dd); /* start..end, displacement, color (default = #000) */
+}
+```
+
+![lineX](img/linex.jpg)
+
+#### lineY
+
+```css
+.art {
+  a = 30px
+  origin(1, 1, a)
+  box-shadow: lineY(2..6, a, #eb02dd); /* start..end, displacement, color (default = #000) */
+}
+```
+
+![lineY](img/liney.jpg)
+
+**Working all together**
+
+```css
+.canvas {
+  grid(10px, 6, #ccc)
+}
+
+.art {
+  a = 30px
+  origin(1, 1, a, #eb02dd)
+  box-shadow:
+    pixel(3, 4, a, #eb02dd),
+    line(2..6, a, purple),
+    lineY(2..6, a, pink),
+    lineX(2..6, a, pink);
+}
+```
+
+![lineY](img/multline.jpg)
+
 ### Edit
 
 #### position
@@ -133,85 +241,6 @@ Because it's fun.
 ```
 
 ![clone](img/clone.jpg)
-
-### Pixel art
-
-#### grid
-
-```css
-.canvas {
-  grid(10px, 4, #000) /* cell size, grid size (default = 4), stroke color (default = #000) */
-}
-```
-
-![grid](img/grid.jpg)
-
-#### origin
-
-```css
-.art {
-  origin(1, 1, 10px, #000) /* row, col, displacement, color (default = #000) */
-}
-```
-
-![](img/.jpg)
-
-#### pixels
-
-```css
-.art {
-  origin(1, 1, 10px, #000)
-  box-shadow: pixel(2, 2, 10px, #000); /* row, col, displacement, color (default = #000) */
-}
-```
-
-![pixels](img/pixels.jpg)
-
-> **Tip:** Create variables and use p( ) > pixel( ).
-
-```css
-.art {
-  a = 10px
-  origin(1, 1, a)
-  box-shadow: p(2, 2, a);
-}
-```
-
-#### line
-
-```css
-.art {
-  a = 10px
-  origin(1, 1, a)
-  box-shadow: line(2..6, a, #eb02dd); /* start..end, displacement, color (default = #000) */
-}
-```
-
-![](img/.jpg)
-
-#### lineX
-
-```css
-.art {
-  a = 10px
-  origin(1, 1, a)
-  box-shadow: lineX(2..6, a, #eb02dd); /* start..end, displacement, color (default = #000) */
-}
-```
-
-![](img/.jpg)
-
-#### lineY
-
-```css
-.art {
-  a = 10px
-  origin(1, 1, a)
-  box-shadow: lineY(2..6, a, #eb02dd); /* start..end, displacement, color (default = #000) */
-}
-```
-
-![](img/.jpg)
 
 ## Versioning
 
