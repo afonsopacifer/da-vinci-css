@@ -30,6 +30,8 @@ Sheldon J. Plankton -
     - [line](#line)
     - [lineX](#linex)
     - [lineY](#liney)
+  - [Images](#images)
+    - [img](#img)
   - [Edit](#edit)
     - [position](#position)
     - [flip](#flip)
@@ -186,7 +188,7 @@ Because it's fun.
 
 ```css
 .canvas {
-  grid(10px, 6, #ccc)
+  grid(30px, 6, #ccc)
 }
 
 .art {
@@ -201,6 +203,15 @@ Because it's fun.
 ```
 
 ![lineY](img/multline.jpg)
+
+### Images
+
+#### img
+
+```css
+.picture
+  img(magic.gif, 200px, 200px) /* url, width, height */
+```
 
 ### Edit
 
@@ -218,6 +229,7 @@ Because it's fun.
 
 ```css
 .element
+  img(magic.gif, 200px, 200px)
   flip(vertical) /* vertical or horizontal (default = horizontal) */
 ```
 
@@ -227,6 +239,7 @@ Because it's fun.
 
 ```css
 .element
+  img(magic.gif, 200px, 200px)
   flip(horizontal) /* vertical or horizontal (default = horizontal) */
 ```
 
