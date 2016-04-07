@@ -1,0 +1,52 @@
+{
+  "viewports": [
+    {
+      "name": "default",
+      "width": 1200,
+      "height": 480
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Da Vinci CSS",
+      "url": "../../test/index.html",
+      "hideSelectors": [],
+      "removeSelectors": [
+      ],
+      "selectors": [
+        ".test-rect",
+        ".test-circ",
+        ".test-oval",
+        ".test-tri",
+        ".test-grid",
+        ".test-origin",
+        ".test-pixel",
+        ".test-line",
+        ".test-lineX",
+        ".test-lineY",
+        ".test-all",
+        ".test-img",
+        ".test-pos",
+        ".test-flip-vertical",
+        ".test-flip-horizontal",
+        ".test-clone"
+      ],
+      "readyEvent": null,
+      "delay": 0,
+      "onBeforeScript": null,
+      "onReadyScript": null
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "../../backstop_data/bitmaps_reference",
+    "bitmaps_test": "../../backstop_data/bitmaps_test",
+    "compare_data": "../../backstop_data/bitmaps_test/compare.json",
+    "casper_scripts": "../../backstop_data/casper_scripts"
+  },
+  "engine": "phantomjs",
+  "report": ["CLI", "browser"],
+  "cliExitOnFail": false,
+  "casperFlags": [],
+  "debug": false,
+  "port": 3001
+}
