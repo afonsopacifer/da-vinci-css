@@ -20,7 +20,7 @@ module.exports = function( grunt ) {
 
       test: {
         files: ['test/*.styl'],
-        tasks: ['stylus:test'],
+        tasks: ['stylus:test','autoprefixer'],
       },
 
       css: {
@@ -114,9 +114,8 @@ module.exports = function( grunt ) {
   grunt.registerTask( 'serve', ['connect:demo','watch']);
   grunt.registerTask( 'deploy', ['gh-pages']);
 
-  grunt.registerTask( 'h', ['postcss']);
-
   // tasks test
   grunt.registerTask( 'lint', ['stylint']);
   grunt.registerTask( 'create-test', ['connect:test','watch']);
+  grunt.registerTask( 'autoprefixer', ['postcss']);
 };
