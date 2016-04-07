@@ -54,6 +54,20 @@ module.exports = function( grunt ) {
       src: ['da-vinci.styl']
     },
 
+    //Post CSS for autoprefixer :)
+    postcss: {
+      options: {
+        cascade: false,
+        map: true,
+        processors: [
+          require('autoprefixer-core')({browsers: 'last 2 version, ie >= 9'})
+        ]
+      },
+      dist: {
+        src: ['test/*.css']
+      }
+    },
+
     //Deploy the production files for gh-pages
     'gh-pages': {
       options: {
@@ -93,11 +107,14 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-gh-pages');
+ grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-stylint');
 
   // tasks demo
   grunt.registerTask( 'serve', ['connect:demo','watch']);
   grunt.registerTask( 'deploy', ['gh-pages']);
+
+  grunt.registerTask( 'h', ['postcss']);
 
   // tasks test
   grunt.registerTask( 'lint', ['stylint']);
