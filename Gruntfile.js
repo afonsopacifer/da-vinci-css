@@ -74,15 +74,15 @@ module.exports = function( grunt ) {
           open: true
         }
       },
-    test: {
-      options: {
-        port: 9000,
-        base: "test/",
-        hostname: "localhost",
-        livereload: true,
-        open: true
+      test: {
+        options: {
+          port: 9000,
+          base: "test/",
+          hostname: "localhost",
+          livereload: true,
+          open: true
+        }
       }
-    }
 
     }
 
@@ -95,9 +95,11 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('grunt-stylint');
 
-  // tasks
-  grunt.registerTask( 'lint', ['stylint']);
-  grunt.registerTask( 'create-test', ['connect:test','watch']);
+  // tasks demo
   grunt.registerTask( 'serve', ['connect:demo','watch']);
   grunt.registerTask( 'deploy', ['gh-pages']);
+
+  // tasks test
+  grunt.registerTask( 'lint', ['stylint']);
+  grunt.registerTask( 'create-test', ['connect:test','watch']);
 };
