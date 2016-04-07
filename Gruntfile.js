@@ -18,6 +18,11 @@ module.exports = function( grunt ) {
         tasks: ['stylus:compile','stylint'],
       },
 
+      test: {
+        files: ['test/*.styl'],
+        tasks: ['stylus:test'],
+      },
+
       css: {
         files: 'demo/assets/css/*.css',
       },
@@ -37,6 +42,11 @@ module.exports = function( grunt ) {
         files: {
           'demo/assets/css/style.css':'demo/assets/stylus/style.styl' // 1:1 compile
         }
+      },
+      test: {
+        files: {
+          'test/style.css':'test/style.styl' // 1:1 compile
+        }
       }
     },
 
@@ -55,7 +65,7 @@ module.exports = function( grunt ) {
     // connect
     connect: {
 
-      server: {
+      demo: {
         options: {
           port: 9000,
           base: "demo/",
@@ -63,7 +73,16 @@ module.exports = function( grunt ) {
           livereload: true,
           open: true
         }
+      },
+    test: {
+      options: {
+        port: 9000,
+        base: "test/",
+        hostname: "localhost",
+        livereload: true,
+        open: true
       }
+    }
 
     }
 
@@ -78,6 +97,7 @@ module.exports = function( grunt ) {
 
   // tasks
   grunt.registerTask( 'lint', ['stylint']);
-  grunt.registerTask( 'serve', ['connect','watch']);
+  grunt.registerTask( 'create-test', ['connect:test','watch']);
+  grunt.registerTask( 'serve', ['connect:demo','watch']);
   grunt.registerTask( 'deploy', ['gh-pages']);
 };

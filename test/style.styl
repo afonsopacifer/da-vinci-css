@@ -1,0 +1,130 @@
+// Da Vinci CSS
+@import "../da-vinci"
+
+/* Colors
+_____________________________________________________ */
+highlight = #eb02dd
+
+*
+	box-sizing border-box
+
+body
+	background-color #eee
+
+.main
+	width 100%
+	padding 30px
+	margin 0 auto
+	max-width 1200px
+
+.section
+	display flex
+	flex-wrap wrap
+
+.section-title
+	width 100%
+	color highlight
+	border-bottom 3px solid highlight
+	padding-bottom 5px
+
+.demo
+	background #fff
+	padding 5px
+	margin 5px
+	flex 5
+	position relative
+
+.demo-title
+	margin 0 0 15px 0
+	border-bottom 3px solid #eee
+	padding-bottom 5px
+
+/* Basic shapes
+------------------------------------------------ */
+
+//rect
+.rect
+	rect(100px, 100px, highlight)
+
+//circ
+.circ
+	circ(50px, highlight)
+
+//oval
+.oval
+	oval(100px, 70px, highlight)
+
+//tri
+.tri
+	tri(100px, 50px, 50px,highlight)
+
+/* Pixel Art
+------------------------------------------------ */
+
+//grid
+.grid
+	grid(30px, 6, #000)
+
+//origin
+.origin
+	origin(1,1,30px,#000)
+
+//pixel
+.pixel
+	origin(1,1,30px,#000)
+	box-shadow: pixel(2,2,30px,#000);
+
+//line
+.line
+	origin(1,1,30px,#000)
+	box-shadow: line(2..6,30px,highlight);
+
+//lineX
+.lineX
+	origin(1,1,30px,#000)
+	box-shadow: lineX(2..6,30px,highlight);
+
+//lineY
+.lineY
+	origin(1,1,30px,#000)
+	box-shadow: lineY(2..6,30px,highlight);
+
+//all
+.all
+	a = 30px
+	origin(1, 1, a, #eb02dd)
+	box-shadow:
+		pixel(3, 4, a, #eb02dd),
+		line(2..6, a, purple),
+		lineY(2..6, a, pink),
+		lineX(2..6, a, pink);
+
+/* Images
+------------------------------------------------ */
+
+//img
+.img
+	img("img/magic.gif", 200px, 200px)
+
+/* Edit
+------------------------------------------------ */
+
+//pos
+.pos
+	rect(100px, 50px, #eb02dd)
+	pos(50px, 50px, 1)
+
+//flip vertival
+.flip-vertical
+	img("img/magic.gif", 200px, 200px)
+	flip(vertical)
+
+//flip horizontal
+.flip-horizontal
+	img("img/magic.gif", 200px, 200px)
+	flip(horizontal)
+
+//clone
+.clone
+	rect(100px, 100px, #eb02dd)
+	clone(110px, 0, #ccc)
