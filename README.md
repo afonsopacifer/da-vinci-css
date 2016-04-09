@@ -3,7 +3,6 @@
 # Da Vinci CSS
 
 ![Build Status](https://travis-ci.org/afonsopacifer/da-vinci-css.svg?branch=master)
-
 ![Release v0.3.0](https://img.shields.io/badge/release-v0.3.0-f775ff.svg)
 
 > Creating shapes and drawings with CSS.
@@ -34,6 +33,14 @@ Sheldon J. Plankton -
     - [lineY](#liney)
   - [Images](#images)
     - [img](#img)
+    - [magicWand](#magicwand)
+    - [grayscale](#grayscale)
+    - [sepia](#sepia)
+    - [saturate](#saturate)
+    - [contrast](#contrast)
+    - [brightness](#brightness)
+    - [hueRotate](#huerotate)
+    - [invert](#invert)
   - [Edit](#edit)
     - [position](#position)
     - [flip](#flip)
@@ -216,6 +223,70 @@ Because it's fun.
 ```
 
 ![magic](img/magic.gif)
+
+#### magicWand
+
+```css
+.picture
+  img("unicorn.gif", 200px, 200px)
+  magicWand()
+```
+
+#### grayscale
+
+```css
+.picture
+  img("magic.gif", 200px, 200px)
+  grayscale(50%)
+```
+
+#### sepia
+
+```css
+.picture
+  img("magic.gif", 200px, 200px)
+  sepia(50%)
+```
+
+#### saturate
+
+```css
+.picture
+  img("magic.gif", 200px, 200px)
+  saturate(50%)
+```
+
+#### contrast
+
+```css
+.picture
+  img("magic.gif", 200px, 200px)
+  contrast(50%)
+```
+
+#### brightness
+
+```css
+.picture
+  img("magic.gif", 200px, 200px)
+  brightness(50%)
+```
+
+#### hueRotate
+
+```css
+.picture
+  img("magic.gif", 200px, 200px)
+  hueRotate(45deg) /* Degrees to rotate the color distribution */
+```
+
+#### invert
+
+```css
+.picture
+  img("magic.gif", 200px, 200px)
+  invert(50%)
+```
 
 ### Edit
 
