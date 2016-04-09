@@ -124,3 +124,7 @@ flip($x = horizontal)
 // clone
 clone($x, $y, $c = #eb02dd)
   box-shadow $x $y $c
+
+// shadow
+shadow($x, $y, $dissipation, $c = #eb02dd)
+  filter drop-shadow($x $y $dissipation $c)

@@ -37,7 +37,6 @@ Sheldon J. Plankton -
     - [position](#position)
     - [flip](#flip)
     - [clone](#clone)
-    - [opacity](#)
     - [shadow](#)
 - [Versioning](#versioning)
 - [Contributing](#contributing)
@@ -218,14 +217,6 @@ Because it's fun.
 
 ![magic](img/magic.gif)
 
-#### magicWand
-
-```css
-.picture
-  img("unicorn.gif", 200px, 200px)
-  magicWand()
-```
-
 ### Edit
 
 #### position
@@ -267,14 +258,6 @@ Because it's fun.
 ```
 
 ![clone](img/clone.jpg)
-
-#### opacity
-
-```css
-.picture
-  img("unicorn.png", 200px, 200px)
-  opacity(50%)
-```
 
 #### shadow
 
