@@ -3,7 +3,7 @@
 # Da Vinci CSS
 
 ![Build Status](https://travis-ci.org/afonsopacifer/da-vinci-css.svg?branch=master)
-![Release v0.3.0](https://img.shields.io/badge/release-v0.3.0-f775ff.svg)
+![Release v0.4.0](https://img.shields.io/badge/release-v0.4.0-f775ff.svg)
 
 > Creating shapes and drawings with CSS.
 
