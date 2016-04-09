@@ -6,7 +6,7 @@ Original repository:
 https://github.com/afonsopacifer/da-vinci-css
 Author:
 Afonso Pacifer (afonsopacifer.com)
-Version: 0.3.0
+Version: 0.4.0
 Licence:
 MIT - https://github.com/afonsopacifer/da-vinci-css/blob/master/licence.md
 */
@@ -124,3 +124,7 @@ flip($x = horizontal)
 // clone
 clone($x, $y, $c = #eb02dd)
   box-shadow $x $y $c
+
+// shadow
+shadow($x, $y, $dissipation, $c = #eb02dd)
+  filter drop-shadow($x $y $dissipation $c)

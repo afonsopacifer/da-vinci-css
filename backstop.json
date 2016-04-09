@@ -29,7 +29,8 @@
         ".test-pos",
         ".test-flip-vertical",
         ".test-flip-horizontal",
-        ".test-clone"
+        ".test-clone",
+        ".test-shadow"
       ],
       "readyEvent": null,
       "delay": 0,

@@ -3,8 +3,7 @@
 # Da Vinci CSS
 
 ![Build Status](https://travis-ci.org/afonsopacifer/da-vinci-css.svg?branch=master)
-
-![Release v0.3.0](https://img.shields.io/badge/release-v0.3.0-f775ff.svg)
+![Release v0.4.0](https://img.shields.io/badge/release-v0.4.0-f775ff.svg)
 
 > Creating shapes and drawings with CSS.
 
@@ -36,8 +35,10 @@ Sheldon J. Plankton -
     - [img](#img)
   - [Edit](#edit)
     - [position](#position)
-    - [flip](#flip)
+    - [flip vertical](#flip-vertical)
+    - [flip horizontal](#flip-horizontal)
     - [clone](#clone)
+    - [shadow](#)
 - [Versioning](#versioning)
 - [Contributing](#contributing)
 - [History](#history)
@@ -229,20 +230,20 @@ Because it's fun.
 
 ![position](img/position.jpg)
 
-#### flip (vertical)
+#### flip vertical
 
 ```css
-.element
+.picture
   img("magic.gif", 200px, 200px)
   flip(vertical) /* vertical or horizontal (default = horizontal) */
 ```
 
 ![vertical](img/vertical.gif)
 
-#### flip (horizontal)
+#### flip horizontal
 
 ```css
-.element
+.picture
   img("magic.gif", 200px, 200px)
   flip(horizontal) /* vertical or horizontal (default = horizontal) */
 ```
@@ -258,6 +259,16 @@ Because it's fun.
 ```
 
 ![clone](img/clone.jpg)
+
+#### shadow
+
+```css
+.picture
+  img("unicorn.png", 200px, 200px)
+  shadow(10px, 10px, 5px, #000) /*X, Y, dissipation, color (default = #000) */
+```
+
+![shadow](img/shadow.png)
 
 ## Versioning
 
