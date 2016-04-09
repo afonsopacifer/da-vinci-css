@@ -33,18 +33,12 @@ Sheldon J. Plankton -
     - [lineY](#liney)
   - [Images](#images)
     - [img](#img)
-    - [magicWand](#magicwand)
-    - [grayscale](#grayscale)
-    - [sepia](#sepia)
-    - [saturate](#saturate)
-    - [contrast](#contrast)
-    - [brightness](#brightness)
-    - [hueRotate](#huerotate)
-    - [invert](#invert)
   - [Edit](#edit)
     - [position](#position)
     - [flip](#flip)
     - [clone](#clone)
+    - [opacity](#)
+    - [shadow](#)
 - [Versioning](#versioning)
 - [Contributing](#contributing)
 - [History](#history)
@@ -232,62 +226,6 @@ Because it's fun.
   magicWand()
 ```
 
-#### grayscale
-
-```css
-.picture
-  img("magic.gif", 200px, 200px)
-  grayscale(50%)
-```
-
-#### sepia
-
-```css
-.picture
-  img("magic.gif", 200px, 200px)
-  sepia(50%)
-```
-
-#### saturate
-
-```css
-.picture
-  img("magic.gif", 200px, 200px)
-  saturate(50%)
-```
-
-#### contrast
-
-```css
-.picture
-  img("magic.gif", 200px, 200px)
-  contrast(50%)
-```
-
-#### brightness
-
-```css
-.picture
-  img("magic.gif", 200px, 200px)
-  brightness(50%)
-```
-
-#### hueRotate
-
-```css
-.picture
-  img("magic.gif", 200px, 200px)
-  hueRotate(45deg) /* Degrees to rotate the color distribution */
-```
-
-#### invert
-
-```css
-.picture
-  img("magic.gif", 200px, 200px)
-  invert(50%)
-```
-
 ### Edit
 
 #### position
@@ -329,6 +267,22 @@ Because it's fun.
 ```
 
 ![clone](img/clone.jpg)
+
+#### opacity
+
+```css
+.picture
+  img("unicorn.png", 200px, 200px)
+  opacity(50%)
+```
+
+#### shadow
+
+```css
+.picture
+  img("unicorn.png", 200px, 200px)
+  shadow(10px, 10px, 5px, #000) /*X, Y, dissipation, color (default = #000) */
+```
 
 ## Versioning
 
